@@ -42,6 +42,10 @@
       $('a[href^="http"]').each(function(){
           $(this).attr('target', '_blank');
       });
+
+      $('a[href^="http://zw-tech.com"]').each(function(){
+        $(this).removeAttribute('target');
+      });
     }
     //每次在有DOM插入时触发
     $(document).bind('DOMNodeInserted', function(event) {
